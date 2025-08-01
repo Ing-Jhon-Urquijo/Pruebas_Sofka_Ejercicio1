@@ -1,5 +1,0 @@
-### Conclusiones
-
-- Flujo automatizado completo
-- Verificación de mensaje final
-- Sitio estable para pruebas funcionales
