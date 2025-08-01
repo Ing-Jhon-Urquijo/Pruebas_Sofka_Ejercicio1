@@ -6,6 +6,6 @@ Feature: Flujo de compra en SauceDemo
     And agrega dos productos al carrito
     And visualiza el carrito
     And procede al checkout
-    And completa el formulario con nombre "John", apellido "Urquijo" y codigo postal "12345"
+    And completa el formulario con nombre "Jhon", apellido "Urquijo" y codigo postal "12345"
     And finaliza la compra
     Then debería ver el mensaje de confirmación "Thank you for your order!"
