@@ -1,0 +1,8 @@
+com\jhon\saucedemo\pages\CheckoutPage.class
+com\jhon\saucedemo\pages\LoginPage.class
+com\jhon\saucedemo\stepdefinitions\SauceDemoStepDefinitions.class
+com\jhon\saucedemo\runners\SauceDemoRunnerTest.class
+com\jhon\saucedemo\pages\ConfirmationPage.class
+com\jhon\saucedemo\pages\ProductsPage.class
+com\jhon\saucedemo\pages\CartPage.class
+com\jhon\saucedemo\steps\SauceDemoSteps.class
