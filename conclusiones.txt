@@ -1,5 +1,18 @@
-### Conclusiones
+Conclusiones y Hallazgos del Ejercicio de Automatización
 
-- Flujo automatizado completo
-- Verificación de mensaje final
-- Sitio estable para pruebas funcionales
+Este ejercicio de automatización de pruebas, centrado en el flujo de compra de SauceDemo, nos permitió identificar y resolver varios problemas comunes en el desarrollo de pruebas de UI:
+
+1. Problema de Flujo Lógico:
+   - Hallazgo: Inicialmente, la prueba fallaba con un `TimeoutException` porque intentaba interactuar con elementos de un formulario de checkout mientras todavía estaba en la página del carrito.
+   - Conclusión: Es crucial que el `feature file` refleje de manera precisa y secuencial cada paso de la interacción del usuario. La falta del paso "procede al checkout" fue la causa raíz del error.
+
+2. Problema de Interferencia del Navegador:
+   - Hallazgo: Un pop-up del gestor de contraseñas de Google bloqueaba la interacción con los elementos de la página.
+   - Conclusión: Los entornos de prueba deben ser consistentes y libres de interferencias. Este problema se resolvió configurando las preferencias de Chrome en el archivo `serenity.conf` para deshabilitar las funciones de autocompletar y guardado de contraseñas.
+
+3. Problema de Validación de Datos:
+   - Hallazgo: La prueba fallaba en el último paso con un `ComparisonFailure` porque el mensaje de confirmación esperado no coincidía exactamente con el texto real en la página (diferencias de mayúsculas/minúsculas y puntuación).
+   - Conclusión: La validación de datos debe ser precisa. Al corregir el `feature file` para que el texto esperado coincidiera con el texto real, la prueba pasó.
+
+Conclusión Final:
+El test completo ahora se ejecuta de principio a fin sin fallos, demostrando la importancia de una configuración correcta, una lógica de prueba sólida y una validación precisa. El proceso de depuración nos permitió crear una prueba robusta y fiable.
